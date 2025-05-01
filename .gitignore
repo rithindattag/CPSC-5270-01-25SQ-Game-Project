@@ -1,0 +1,6 @@
+.import/
+.godot/
+.mono/
+*.mono
+*.csproj
+*.sln

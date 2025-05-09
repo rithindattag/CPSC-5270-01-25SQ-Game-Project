@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf3g3p4jono8w"]
+
+[ext_resource type="Script" uid="uid://dxcm3iu7psv4h" path="res://Scripts/Obstacle.cs" id="1_pwaxl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0tk4"]
+albedo_color = Color(1, 0, 0, 1)
+
+[node name="StaticBody3D" type="StaticBody3D"]
+script = ExtResource("1_pwaxl")
+CurrentType = 2
+
+[node name="Upper Obstacle" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.121236, 0)
+use_collision = true
+size = Vector3(6, 0.674993, 1)
+material = SubResource("StandardMaterial3D_a0tk4")

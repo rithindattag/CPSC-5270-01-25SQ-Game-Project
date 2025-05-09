@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bagryql5f2uju"]
+
+[ext_resource type="Script" uid="uid://dxcm3iu7psv4h" path="res://Scripts/Obstacle.cs" id="1_d7ytq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0tk4"]
+albedo_color = Color(1, 0, 0, 1)
+
+[node name="StaticBody3D" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.817564, 0)
+script = ExtResource("1_d7ytq")
+
+[node name="Standard Obstacle" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.199959, 0)
+use_collision = true
+size = Vector3(1, 2.25049, 1)
+material = SubResource("StandardMaterial3D_a0tk4")

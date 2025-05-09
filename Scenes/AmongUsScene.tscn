@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://doy2mx4lmwojh"]
+
+[ext_resource type="PackedScene" uid="uid://cprx8qb2p24ug" path="res://Assets/Player/AmongUs Character/among_us_character.glb" id="1_u4h6m"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_u4h6m")]
+
+[node name="Skeleton3D" parent="Sketchfab_model/c1e1bf4d58a349dfac41fbec3776cc91_fbx/Object_2/RootNode/AmongUsArmature/Object_9/BASE_00" index="0"]
+bones/0/position = Vector3(1.15241e-16, 0.0211111, -1.52349)
+bones/1/position = Vector3(0, 2.21212, 9.77408e-10)
+bones/1/rotation = Quaternion(7.088e-09, -2.91434e-16, 5.52802e-17, 1)
+bones/3/position = Vector3(0.536507, -0.47062, 0.43297)
+bones/3/rotation = Quaternion(0.816484, -0.183507, -0.385012, 0.389159)
+bones/4/position = Vector3(-0.0332233, 0.598153, -0.0273946)
+bones/4/rotation = Quaternion(-5.02926e-09, -7.45058e-09, -4.14693e-09, 1)
+bones/6/position = Vector3(-0.536507, -0.431489, -0.0163411)
+bones/6/rotation = Quaternion(0.848223, -0.148075, 0.399979, -0.314019)
+bones/7/position = Vector3(-0.325422, 0.416595, 0.26833)
+bones/7/rotation = Quaternion(0.399528, 7.45058e-09, 0.484534, 0.778206)
+bones/9/position = Vector3(-1.66533e-16, 1.46095, 0.135775)
+bones/11/position = Vector3(0.947168, 1.18386, -0.40383)
+bones/11/rotation = Quaternion(1.18799e-07, -0.0371221, 0.999311, 4.41311e-09)

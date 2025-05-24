@@ -1,5 +1,6 @@
 using Godot;
 
+// Factory for creating standard Obstacle instances from a PackedScene
 public class StandardObstacleFactory : IObstacleFactory
 {
     private PackedScene _scene;

@@ -1,3 +1,4 @@
+// Strategy to move the player one lane to the left, if possible
 public class SwitchLeftStrategy : ILaneSwitchStrategy
 {
     public int GetNextLane(int currentLane)

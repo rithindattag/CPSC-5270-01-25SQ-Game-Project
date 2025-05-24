@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://1mrulq4fsaw8"]
+
+[ext_resource type="Script" uid="uid://bsyu2o25o25d3" path="res://Scripts/Pickupable.cs" id="1_2qo34"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sgwqp"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2qo34"]
+material = SubResource("StandardMaterial3D_sgwqp")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jgi06"]
+size = Vector3(0.547638, 0.585201, 0.545959)
+
+[node name="Coin" type="Area3D"]
+script = ExtResource("1_2qo34")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.544184, 0, 0, 0, 0.544184, 0, 0, 0, 0.544184, 0, 0.826097, 0)
+mesh = SubResource("BoxMesh_2qo34")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000259399, 0.824635, -0.000213623)
+shape = SubResource("BoxShape3D_jgi06")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

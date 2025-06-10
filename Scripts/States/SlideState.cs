@@ -1,16 +1,18 @@
 using Godot;
 
-// Represents the player's sliding state
 public class SlideState : IPlayerState
 {
     private float _duration;
     private float _elapsed = 0f;
+    [Export]
+    public float SlidingDuration = 2f;
+
 
     public void Enter(Player player)
     {
         _duration = player.SlidingDuration;
+        player.PlayAnimation("Crouch_Idle");
 
-        // Disable the standing collider while sliding
         var collider = player.GetNode<CollisionShape3D>("StandingCollision");
         if (collider != null)
             collider.Disabled = true;
@@ -18,7 +20,6 @@ public class SlideState : IPlayerState
 
     public void Exit(Player player)
     {
-        // Re-enable the standing collider when slide ends
         var collider = player.GetNode<CollisionShape3D>("StandingCollision");
         if (collider != null)
             collider.Disabled = false;
@@ -28,10 +29,9 @@ public class SlideState : IPlayerState
     {
         _elapsed += (float)delta;
 
-        // Return to idle after sliding duration ends
         if (_elapsed >= _duration)
         {
-            player.ChangeState(new IdleState());
+            player.ChangeState(new RunState());
         }
     }
 }

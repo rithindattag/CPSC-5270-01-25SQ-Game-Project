@@ -145,9 +145,19 @@ public partial class GameManager : Node3D
 
         foreach (var coin in coins)
         {
-            GetNode("ObstacleContainer").AddChild(coin);
-            if (coin is IGameElement element)
-                element.OnSpawn();
+        // 👇 Load the material once
+        var coinGlowMat = GD.Load<ShaderMaterial>("res://Shaders/CoinGlowMaterial.tres");
+
+        // Apply the material to coin's mesh
+        var meshInstance = coin.GetNodeOrNull<MeshInstance3D>("MeshInstance3D");
+        if (meshInstance != null)
+            meshInstance.SetSurfaceOverrideMaterial(0, coinGlowMat);
+
+        // Add to scene
+        GetNode("ObstacleContainer").AddChild(coin);
+
+        if (coin is IGameElement element)
+            element.OnSpawn();
         }
     }
 

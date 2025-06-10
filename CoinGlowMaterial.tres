@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cc4cokrndvp37"]
+
+[ext_resource type="Shader" uid="uid://dqlgxnttdichc" path="res://Shaders/CoinGlow.gdshader" id="1_jrh8r"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_jrh8r")
+shader_parameter/glow_color = Color(1, 0.8, 0, 1)
+shader_parameter/glow_strength = 2.5

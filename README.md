@@ -87,7 +87,7 @@ All shaders are custom-written in `.gdshader` format using GLSL.
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/ashfall-descent.git
+   git clone https://github.com/rithindattag/CPSC-5270-01-25SQ-Game-Project.git
    cd ashfall-descent
    git checkout final
    ```
